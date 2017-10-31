@@ -1,3 +1,9 @@
 {
-    "site_title": "Site title"
+    "site_title": "Site title",
+    "lead_title": "Lead title",
+    "lead_text": "Lead text",
+    "button": "Action button",
+    "call_us": "Call to action",
+    "phone": "444-444-4444",
+    "form_container_title": "Form title"
 }

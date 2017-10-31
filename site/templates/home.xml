@@ -5,8 +5,115 @@
 		<head>
 			<title><cms:text constant="site_title"/></title>
 			<cms:module name="head_tag" action="print_tag"/>
+			<cms:collection include="animation_chain"/>
 		</head>
 		<body>
+			<cms:desktop>
+			<!-- Dialog form -->
+			<div class="floating_form">
+					<p><cms:text constant="form_container_title"/></p>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_form"
+						/>
+				</div>
+			</cms:desktop>
+
+			<header>
+				<!-- Site logo -->
+				<img
+					src="_BASEURL.'/site/images/logo.svg'"
+					alt="saffron"
+					cms:eval="src"
+					class="logo"
+					/>
+
+				<h1><cms:text constant="lead_title"/></h1>
+				<p><cms:text constant="lead_text"/></p>
+
+				<!-- Link to open Dialog form -->
+				<cms:desktop>
+					<a href="javascript:void(0)" class="action">
+						<cms:text constant="button"/>
+					</a>
+				</cms:desktop>
+				<cms:mobile>
+					<a href="#form" class="action">
+						<cms:text constant="button"/>
+					</a>
+				</cms:mobile>
+			</header>
+
+			<!-- Section Products -->
+			<section class="products">
+				<!-- lead article with title from generic template -->
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="products_article"
+					template="stock/article_generic.xml"
+					>
+					<param name="title" value=""/>
+				</cms:module>
+
+				<!-- LI of articles connect to site sprite by text id -->
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="products_group"
+						template="parts/group_list.xml"
+					/>
+				</ul>
+			</section>
+
+			<section class="gallery">
+			<!-- Gallery Module List of images from group -->
+				<cms:module
+					name="gallery"
+					action="show_image_list"
+					group="main_gallery"
+					template="parts/main_gallery.xml"
+					/>
+			</section>
+
+			<footer>
+				<!-- container for content -->
+				<div class="content_left">
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="footer_article"
+						template="stock/article_generic.xml"
+						>
+						<param name="title" value=""/>
+					</cms:module>
+					<p><cms:text constant="call_us"/></p>
+					<a href="'tel:'.urlencode(Language::get_Text('phone'))"
+						cms:eval="href"
+						class="phone"
+						>
+						<cms:text constant="phone"/>
+					</a>
+				</div>
+
+				<!-- Contact form on the right-->
+				<div class="form_container" id="form">
+					<p><cms:text constant="form_container_title"/></p>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_form"
+						/>
+				</div>
+				<!-- Copyright -->
+				<cms:template file="stock/copyright.xml">
+					<param name="holder" value="copyright_holder"/>
+					<param name="text" value="copyright_text"/>
+					<param name="light" value=""/>
+				</cms:template>
+			</footer>
 		</body>
 	</html>
 </document>

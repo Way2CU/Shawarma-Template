@@ -51,6 +51,31 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	if (!Site.is_mobile()) {
+		//Dialog form
+		Site.floating_form = new Caracal.Dialog();
+		Site.floating_form
+			.set_title(language_handler.getText(null, 'form_title'))
+			.set_content_from_dom('div.floating_form')
+			.set_size(600, 400);
+
+		//Button to call floating form dialog
+		Site.button = document.querySelector('a.action');
+		Site.button.addEventListener('click',function(){
+			Site.floating_form.open();
+		});
+
+		// create handler for submitting dialog form
+		Caracal.ContactForm.list[0].events.connect('submit-success', function(event) {
+			Site.floating_form.close();
+			return true;
+		})
+
+	};
+
+	//Light box
+	Site.home_page_gallery = new LightBox('section.gallery a', false, false, true);
 };
 
 
