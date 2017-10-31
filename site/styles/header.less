@@ -7,14 +7,25 @@
  */
 @import (css) 'stock/header.css';
 
+.default-button(@color_text, @color_background) {
+	text-decoration: none;
+	color: @color_text;
+	background-color: @color_background;
+	padding: 1.5em;
+}
+
+.link-hover-effect() {
+	transform: translate(-50%, -10%);
+	box-shadow: 0px 27px 23px -17px rgba(0,0,0,0.75);
+}
 
 header {
 	text-align: center;
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
 	min-height: 600px;
 	padding-top: 1em;
-
-
+	background: @header_background_color;
+	color: @color_text_header;
 }
 
 // example header definition applied only for specific theme
@@ -27,7 +38,6 @@ header when (@theme='default') {
 		width: 400px;
 		height: 200px;
 		margin: 0 auto;
-		filter: invert(100%);
 	}
 
 	p {
@@ -42,7 +52,7 @@ header when (@theme='default') {
 	}
 
 	a.action {
-		.default-button();
+		.default-button(@color_text_header, @action_button_background);
 
 		position: absolute;
 		top: 75%;
@@ -52,7 +62,8 @@ header when (@theme='default') {
 		box-shadow:  0px 0px 23px -5px rgba(0,0,0,0.75);
 		transition: all 0.3s;
 
-		&:hover {
+		&:hover,
+		&:active {
 			.link-hover-effect();
 		}
 	}

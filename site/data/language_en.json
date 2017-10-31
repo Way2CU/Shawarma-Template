@@ -5,5 +5,7 @@
     "button": "Action button",
     "call_us": "Call to action",
     "phone": "444-444-4444",
-    "form_container_title": "Form title"
+    "form_container_title": "Form title",
+    "copyright_holder": "Developed by <a href=\"http://way2cu.com\" target=\"_blank\">Way2CU</a>",
+    "copyright_text": "All rights reserved."
 }
