@@ -9,8 +9,51 @@
 
 
 header {
+	text-align: center;
+	padding: 0 calc(~'(100% - 1200px)' / 2 );
+	min-height: 600px;
+	padding-top: 1em;
+
+
 }
 
 // example header definition applied only for specific theme
-header when (@theme='regular') {
+header when (@theme='default') {
+	min-height: 584px;
+	position: relative;
+
+	img {
+		display: block;
+		width: 400px;
+		height: 200px;
+		margin: 0 auto;
+		filter: invert(100%);
+	}
+
+	p {
+		margin: @paragraph_spacing auto;
+		display: block;
+		font-size: 1.3em;
+	}
+
+	h1 {
+		margin: @paragraph_spacing auto;
+		display: block;
+	}
+
+	a.action {
+		.default-button();
+
+		position: absolute;
+		top: 75%;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 15px;
+		box-shadow:  0px 0px 23px -5px rgba(0,0,0,0.75);
+		transition: all 0.3s;
+
+		&:hover {
+			.link-hover-effect();
+		}
+	}
 }

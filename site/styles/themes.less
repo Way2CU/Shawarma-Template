@@ -16,6 +16,26 @@
 	@color_background: #333333;
 }
 
+.theme('default') {
+	@color_text: #000;
+	@color_background: white;
+
+	@action_button_background: #f39c12;
+	@action_button_text_color: white;
+
+	.default-button() {
+		text-decoration: none;
+		color: @action_button_text_color;
+		background-color: @action_button_background;
+		padding: 1.5em;
+	}
+
+	.link-hover-effect() {
+		top: 73%;
+		box-shadow: 0px 27px 23px -17px rgba(0,0,0,0.75);
+	}
+}
+
 // mixin used for publishing selected theme name
 .theme(@name) {
 	@theme: @name;
