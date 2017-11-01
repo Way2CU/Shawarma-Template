@@ -5,3 +5,76 @@
  * Copyright (c) 2017. by Way2CU, http://way2cu.com
  * Authors: Mladen Mijatov, Vladimir Anusic
  */
+
+/**
+ *	Section products
+ */
+
+section.products {
+	text-align: center;
+	padding: 0 @paragraph_spacing;
+
+	article {
+		display: block;
+		width: 100%;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+		list-style: none;
+
+		li {
+			display: block;
+			width: 100%;
+
+			svg {
+				width: 25%;
+				height: 25%;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+/**
+ *	Section gallery
+ */
+
+section.gallery a {
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
+	display: block;
+	width: 100%;
+	height: calc(~'100vw * 0.65');
+}
+
+/**
+ *	Dialog
+ */
+
+div.dialog.visible {
+	top: 20%;
+
+	div.title {
+		background-color: @footer_background_color;
+	}
+
+	div.inner_content div.floating_form {
+		display: block;
+		box-sizing: border-box;
+		padding: @paragraph_spacing;
+	}
+
+	div.content div.command_bar a {
+		margin-top: 0.5em;
+		padding: 0.5em;
+		font-family: "ultra";
+		background-color: @footer_button_background_color;
+		border-radius: 15px;
+	}
+}

@@ -15,3 +15,15 @@
 
 @section_padding: @section_spacing calc(~'(100% - 1200px)' / 2 );
 @finger_size: 2.5rem;
+
+.default-button(@color_text, @color_background) {
+	text-decoration: none;
+	color: @color_text;
+	background-color: @color_background;
+	padding: 1.5em;
+}
+
+.link-hover-effect() {
+	transform: translate(-50%, -10%);
+	box-shadow: 0px 27px 23px -17px rgba(0,0,0,0.75);
+}

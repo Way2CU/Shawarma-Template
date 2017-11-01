@@ -10,24 +10,30 @@
 @import 'common.less';
 @import 'fonts.less';
 
-// @import 'header_mobile.less';
-// @import 'content_mobile.less';
-// @import 'footer_mobile.less';
+@import 'header_mobile.less';
+@import 'content_mobile.less';
+@import 'footer_mobile.less';
+@import (css) 'stock/copyright.css';
 
 // load theme
-.theme(@default-theme);
+.theme('default');
 
 body {
 	background-color: @color_background;
 	color: @color_text;
-	font-family: generic;
+	font-family: "ultra","raleway",Arial, serif;
 }
 
 input,
 select,
 textarea,
 button {
-	font-family: generic;
+	font-family: 'raleway';
+}
+
+h1,h2,h3,h4,h5,button {
+	font-family: "ultra";
+	font-weight: 400;
 }
 
 h1,
@@ -44,4 +50,5 @@ p {
 	margin: 0;
 	margin-bottom: @paragraph_spacing;
 	padding: 0;
+	font-family: 'raleway';
 }

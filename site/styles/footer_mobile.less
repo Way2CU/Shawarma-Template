@@ -5,3 +5,221 @@
  * Copyright (c) 2017. by Way2CU, http://way2cu.com
  * Authors: Mladen Mijatov, Vladimir Anusic
  */
+
+ footer {
+	color: @color_background;
+	background-color: @footer_background_color;
+	padding: 0 @paragraph_spacing;
+	padding-bottom: @paragraph_spacing;
+	position: relative;
+
+	div.content_left {
+		display: block;
+
+		article {
+			display: block;
+			width: 100%;
+
+			&:after {
+				content: "";
+				top: 100%;
+				left: 0;
+				display: block;
+				width: 100%;
+				margin-bottom: 1em;
+				background-color: white;
+				height: 1px;
+			}
+
+			h1 {
+				font-weight: 400;
+			}
+
+			h2 {
+				margin: 0;
+				padding: 1em 0;
+			}
+
+			p strong {
+				display: inline-block;
+				padding-top: 1em;
+			}
+		}
+
+		a {
+			.default-button(@color_background, @footer_button_background_color);
+			padding: 1em;
+			border-radius: 15px;
+			margin: 0.5em 0;
+			display: inline-block;
+			transition: all 0.3s;
+
+			&:active {
+				transform: translateY(-10%);
+				box-shadow: 0px 27px 23px -17px darken(@footer_background_color, 50%);
+				color: @footer_background_color;
+				transition: all 0.3s;
+			}
+		}
+	}
+
+	div.form_container {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		box-sizing: border-box;
+		padding: @paragraph_spacing;
+		border: 5px solid @color_text;
+		background-color: @color_background;
+
+		p {
+			color: @color_text;
+			font-weight: 700;
+			text-align: center;
+			padding-bottom: @paragraph_spacing;
+			margin: 0;
+		}
+
+		form {
+			display: block;
+			width: 100%;
+
+			label {
+				display: block;
+				width: 100%;
+				box-sizing: border-box;
+				padding-bottom: @paragraph_spacing;
+
+				select,
+				input {
+					padding: @paragraph_spacing 0.25em;
+					display: inline-block;
+					vertical-align: middle;
+					width: 70%;
+					box-sizing: border-box;
+					background-color: @color_background;
+					border: 1px solid @color_text;
+
+					&:focus {
+						border: 1px solid @footer_background_color;
+					}
+				}
+
+				span {
+					display: inline-block;
+					vertical-align: middle;
+					width: 30%;
+					color: @color_text;
+				}
+			}
+		}
+
+		div.controls {
+			display: block;
+			width: 100%;
+			margin: 0 auto;
+			text-align: right;
+
+			button {
+				.default-button(@color_background, @footer_button_background_color);
+				padding: 1em;
+				border-radius: 15px;
+				display: inline-block;
+				border: 1px solid transparent;
+				transition: all 0.3s;
+
+				&:active {
+					transform: translateY(-10%);
+					box-shadow: 0px 27px 23px -17px darken(@footer_background_color, 50%);
+					color: @footer_background_color;
+					transition: all 0.3s;
+				}
+			}
+		}
+	}
+
+	div.copyright {
+		position: absolute;
+		display: block;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: @color_text;
+		color: white;
+		text-align: center;
+		background-position: calc(~'50% - 130px') center;
+		padding: 1em 0;
+
+		a:active {
+			color:@footer_background_color;
+			transition: all 0.3s;
+		}
+	}
+}
+
+div.floating_form {
+	p {
+		color: @color_text;
+		font-weight: 700;
+		text-align: center;
+		padding-bottom: @paragraph_spacing;
+		margin: 0;
+	}
+
+	form {
+		display: block;
+		width: 100%;
+
+		label {
+			display: block;
+			width: 100%;
+			box-sizing: border-box;
+			padding-bottom: @paragraph_spacing;
+
+			select,
+			input {
+				padding: @paragraph_spacing 0.25em;
+				display: inline-block;
+				vertical-align: middle;
+				width: 70%;
+				box-sizing: border-box;
+				background-color: @color_background;
+				border: 1px solid @color_text;
+
+				&:focus {
+					border: 1px solid @footer_background_color;
+				}
+			}
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				width: 30%;
+				color: @color_text;
+			}
+		}
+	}
+
+	div.controls {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		text-align: right;
+
+		button {
+			.default-button(@color_background, @footer_button_background_color);
+			padding: 1em;
+			border-radius: 15px;
+			display: inline-block;
+			border: 1px solid transparent;
+			transition: all 0.3s;
+
+			&:active {
+				transform: translateY(-10%);
+				box-shadow: 0px 27px 23px -17px darken(@footer_background_color, 50%);
+				color: @footer_background_color;
+				transition: all 0.3s;
+			}
+		}
+	}
+}
