@@ -38,6 +38,7 @@
 						<cms:text constant="button"/>
 					</a>
 				</cms:desktop>
+
 				<cms:mobile>
 					<a href="#form" class="action">
 						<cms:text constant="button"/>

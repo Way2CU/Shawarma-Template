@@ -3,7 +3,7 @@
 		"en": "Shawarma template"
 	},
 	"author": "Vladimir Anusic",
-	"contact": "john@email.com",
+	"contact": "vladimir@way2cu.com",
 	"version": "1.0",
 	"caracal_version": "v0.4",
 	"updated": "2017-12-31 12:00:00",
@@ -20,6 +20,20 @@
 				"header_background_color": "linear-gradient(90deg, #f39c12 4%, #210402)",
 				"color_text_header": "#fff",
 				"footer_background_color": "#f39c12",
+				"footer_button_background_color": "#000",
+				"footer_button_text_color": "#fff"
+			}
+		},
+		{
+			"name": "red",
+			"colors": {
+				"color_text": "#000",
+				"color_background": "#fff",
+				"action_button_background": "#ff1c12",
+				"action_button_text_color": "#fff",
+				"header_background_color": "linear-gradient(90deg, #ff1c12 4%, #210402)",
+				"color_text_header": "#fff",
+				"footer_background_color": "#ff1c12",
 				"footer_button_background_color": "#000",
 				"footer_button_text_color": "#fff"
 			}

@@ -6,16 +6,6 @@
  * Authors: Mladen Mijatov, Vladimir Anusic
  */
 
-.theme('regular') {
-	@color_text: #333333;
-	@color_background: white;
-}
-
-.theme('reverse') {
-	@color_text: white;
-	@color_background: #333333;
-}
-
 .theme('default') {
 	@color_text: #000;
 	@color_background: #fff;
@@ -30,6 +20,22 @@
 	@footer_button_background_color: #000;
 	@footer_button_text_color: #fff;
 }
+
+.theme('red') {
+	@color_text: #000;
+	@color_background: #fff;
+
+	@action_button_background: #ff1c12;
+	@action_button_text_color: #fff;
+
+	@header_background_color: linear-gradient(90deg, #ff1c12 4%, #210402);
+	@color_text_header: #fff;
+
+	@footer_background_color: #ff1c12;
+	@footer_button_background_color: #000;
+	@footer_button_text_color: #fff;
+}
+
 
 // mixin used for publishing selected theme name
 .theme(@name) {
