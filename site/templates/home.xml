@@ -9,8 +9,8 @@
 		</head>
 		<body>
 			<cms:desktop>
-			<!-- Dialog form -->
-			<div class="floating_form">
+				<!-- Dialog form -->
+				<div class="floating_form">
 					<p><cms:text constant="form_container_title"/></p>
 					<cms:module
 						name="contact_form"
@@ -64,12 +64,12 @@
 						action="show_list"
 						group="products_group"
 						template="parts/group_list.xml"
-					/>
+						/>
 				</ul>
 			</section>
 
 			<section class="gallery">
-			<!-- Gallery Module List of images from group -->
+				<!-- Gallery Module List of images from group -->
 				<cms:module
 					name="gallery"
 					action="show_image_list"
