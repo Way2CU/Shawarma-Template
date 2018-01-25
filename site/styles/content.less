@@ -6,10 +6,13 @@
  * Authors: Mladen Mijatov, Vladimir Anusic
  */
 
-/*
+body > div.floating_form {
+	display: none;
+}
+
+/**
  * Section products
  */
-
 section.products {
 	padding: @section_padding;
 	text-align: center;
@@ -34,8 +37,8 @@ section.products ul li svg {
 }
 
 /*
-* Section Gallery
-*/
+ * Section Gallery
+ */
 
 section.gallery a {
 	display: inline-block;
@@ -50,8 +53,7 @@ section.gallery a {
 /**
  *	Dialog
  */
-
- div.dialog.visible {
+div.dialog.visible {
 	top: 20%;
 }
 div.dialog.visible div.title {
