@@ -18,21 +18,26 @@
 // load theme
 .theme('default');
 
+// site logo
+@logo: '';
+@mask: 'circle';
+
 body {
 	background-color: @color_background;
+
 	color: @color_text;
-	font-family: "ultra","raleway",Arial, serif;
+	font-family: ultra, raleway, Arial, serif;
 }
 
 input,
 select,
 textarea,
 button {
-	font-family: 'raleway';
+	font-family: raleway;
 }
 
 h1,h2,h3,h4,h5,button {
-	font-family: "ultra";
+	font-family: ultra;
 	font-weight: 400;
 }
 
@@ -50,5 +55,6 @@ p {
 	margin: 0;
 	margin-bottom: @paragraph_spacing;
 	padding: 0;
-	font-family: 'raleway';
+
+	font-family: raleway;
 }
