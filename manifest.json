@@ -5,7 +5,7 @@
 	"author": "Vladimir Anusic",
 	"contact": "vladimir@way2cu.com",
 	"version": "1.0",
-	"caracal_version": "v0.4",
+	"caracal_version": "develop",
 	"updated": "2017-12-31 12:00:00",
 	"categories": ["mini_site"],
 	"features": ["ltr"],
