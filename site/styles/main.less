@@ -10,17 +10,17 @@
 @import 'common.less';
 @import 'fonts.less';
 
-@import 'header.less';
-@import 'content.less';
-@import 'footer.less';
-@import (css) 'stock/copyright.css';
+// set logo file
+@logo: '';
+@mask: 'none';
 
 // load theme
 .theme('default');
 
-// site logo
-@logo: '';
-@mask: 'none';
+@import 'header.less';
+@import 'content.less';
+@import 'footer.less';
+@import (css) 'stock/copyright.css';
 
 body {
 	background-color: @color_background;
