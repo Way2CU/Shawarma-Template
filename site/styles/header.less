@@ -5,21 +5,16 @@
  * Copyright (c) 2017. by Way2CU, http://way2cu.com
  * Authors: Mladen Mijatov, Vladimir Anusic
  */
-@import (css) 'stock/header.css';
 
 header {
-	text-align: center;
-	padding: 0 calc(~'(100% - 1200px)' / 2 );
+	position: relative;
 	min-height: 600px;
+	padding: 0 calc(~'(100% - 1200px)' / 2 );
 	padding-top: 1em;
 	background: @header_background_color;
-	color: @color_text_header;
-}
 
-// example header definition applied only for specific theme
-header when (@theme='default') {
-	min-height: 584px;
-	position: relative;
+	color: @color_text_header;
+	text-align: center;
 
 	img {
 		display: block;
@@ -54,5 +49,14 @@ header when (@theme='default') {
 		&:active {
 			.link-hover-effect();
 		}
+	}
+
+	figure.logo {
+		width: 12rem;
+		height: 12rem;
+
+		background-image: url(@logo);
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 }

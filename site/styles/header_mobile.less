@@ -5,47 +5,50 @@
  * Copyright (c) 2017. by Way2CU, http://way2cu.com
  * Authors: Mladen Mijatov, Vladimir Anusic
  */
-@import (css) 'stock/header.css';
-
 
 header {
 	background: @header_background_color;
 	text-align: center;
 	color: white;
 	height: 100vw;
-}
 
-header img {
-	width: 50%;
-	height: auto;
-	padding: 1em 0;
-}
-
-header h1 {
-	font-size: 1.5em;
-}
-
-header p {
-	margin: 0;
-	padding-bottom: @paragraph_spacing;
-}
-
-header a {
-	.default-button(@color_text_header, @action_button_background);
-
-	display: block;
-	width: 50%;
-	margin: 0 auto;
-	padding: 0.5em;
-	border-radius: 15px;
-	box-shadow:  0px 0px 23px -5px rgba(0,0,0,0.75);
-
-	&:active {
-		transform: translateY(-10%);
-		box-shadow: 0px 27px 23px -17px rgba(0,0,0,0.75);
+	img {
+		width: 50%;
+		height: auto;
+		padding: 1em 0;
 	}
-}
 
-// example header definition applied only for specific theme
-header when (@theme='regular') {
+	h1 {
+		font-size: 1.5em;
+	}
+
+	p {
+		margin: 0;
+		padding-bottom: @paragraph_spacing;
+	}
+
+	a {
+		.default-button(@color_text_header, @action_button_background);
+
+		display: block;
+		width: 50%;
+		margin: 0 auto;
+		padding: 0.5em;
+		border-radius: 15px;
+		box-shadow:  0px 0px 23px -5px rgba(0,0,0,0.75);
+
+		&:active {
+			transform: translateY(-10%);
+			box-shadow: 0px 27px 23px -17px rgba(0,0,0,0.75);
+		}
+	}
+
+	figure.logo {
+		width: 12rem;
+		height: 12rem;
+
+		background-image: url(@logo);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
 }
