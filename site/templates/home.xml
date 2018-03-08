@@ -46,10 +46,9 @@
 						name="articles"
 						action="show"
 						text_id="products_article"
-						template="stock/article_generic.xml"
-						>
-						<param name="title" value=""/>
-					</cms:module>
+						template="kodkod/articles/generic.xml"
+						kodkod:type="generic"
+						/>
 				</div>
 
 				<!-- LI of articles connect to site sprite by text id -->
