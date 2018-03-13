@@ -41,7 +41,7 @@
 			<!-- Section Products -->
 			<section class="products">
 				<!-- lead article with title from generic template -->
-				<div kodkod:container="articles,gallery" kodkod:count="1">
+				<div kodkod:container="articles,gallery" kodkod:count="2">
 					<cms:module
 						name="articles"
 						action="show"
