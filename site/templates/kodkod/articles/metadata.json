@@ -3,10 +3,6 @@
 		"default": true,
 		"name": "variant_article_generic",
 		"preview_image": "preview/generic.svg",
-		"stylesheet": {
-			"desktop": "generic.less",
-			"mobile": "generic.mobile.less"
-		},
 		"editable": ["id"]
 	},
 	"two_columns": {
@@ -14,7 +10,7 @@
 		"preview_image": "preview/two_columns.svg",
 		"stylesheet": {
 			"desktop": "two_columns.less",
-			"mobile": "two_columns.mobile.less"
+			"mobile": "two_columns.less"
 		},
 		"editable": ["id"]
 	},
@@ -31,8 +27,8 @@
 		"name": "variant_article_floating_image",
 		"preview_image": "preview/floating_image.svg",
 		"stylesheet": {
-			"desktop": "floating_image.less",
-			"mobile": "floating_image.mobile.less"
+			"desktop": "with_image.less",
+			"mobile": "with_image.mobile.less"
 		},
 		"editable": ["id"]
 	},
