@@ -16,6 +16,16 @@ body > div.floating_form {
 section.products {
 	padding: @section_padding;
 	text-align: center;
+
+	> * {
+		display: inline-block;
+		vertical-align: top;
+		width: calc(~'50% - 1em');
+
+		&:first-child {
+			margin-right: 2em;
+		}
+	}
 }
 
 section.products ul {

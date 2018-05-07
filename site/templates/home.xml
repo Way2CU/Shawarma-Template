@@ -41,14 +41,7 @@
 			<!-- Section Products -->
 			<section class="products">
 				<!-- lead article with title from generic template -->
-				<div kodkod:container="articles,gallery" kodkod:count="2">
-					<cms:module
-						name="articles"
-						action="show"
-						text_id="products_article"
-						template="kodkod/articles/generic.xml"
-						kodkod:type="generic"
-						/>
+				<div kodkod:container="articles,contact_form" kodkod:count="2">
 				</div>
 
 				<!-- LI of articles connect to site sprite by text id -->
