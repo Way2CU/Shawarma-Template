@@ -1,5 +1,5 @@
 /**
- * Generic Contact Form Style
+ * Horizontal Contact Form Style
  * Kodkod Templates
  *
  * Copyright © 2018 Way2CU. All Rights Reserved.
@@ -7,14 +7,20 @@
  */
 @import (reference) '../../common.less';
 
-div.kodkod.form.generic {
+div.kodkod.form.horizontal {
 	h3 {
 		margin-bottom: @header_spacing;
 	}
 
 	label {
-		display: block;
-		margin-bottom: @control_spacing;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: @control_spacing;
+
+		html[dir=rtl] & {
+			margin-right: 0;
+			margin-left: @control_spacing;
+		}
 
 		span {
 			display: block;

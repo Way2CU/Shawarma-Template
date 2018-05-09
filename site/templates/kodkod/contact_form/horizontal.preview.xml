@@ -6,8 +6,13 @@
 		}
 
 		label {
-			display: block;
-			margin-bottom: 1rem;
+			display: inline-block;
+			margin-right: 1rem;
+		}
+
+		html[dir=rtl] label {
+			margin-rigth: 0;
+			margin-left: 1rem;
 		}
 
 		label span {
@@ -16,7 +21,7 @@
 	</style>
 
 	<template>
-		<div class="kodkod form generic">
+		<div class="kodkod form horizontal">
 			<h3>Dolor minima enim suscipit praesentium atque esse.</h3>
 
 			<form action="javascript: void();">
