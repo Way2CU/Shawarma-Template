@@ -41,7 +41,7 @@
 			<!-- Section Products -->
 			<section class="products">
 				<!-- lead article with title from generic template -->
-				<div kodkod:container="articles,contact_form" kodkod:count="2">
+				<div kodkod:container="articles,contact_form,gallery" kodkod:count="4">
 				</div>
 
 				<!-- LI of articles connect to site sprite by text id -->
