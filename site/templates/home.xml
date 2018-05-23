@@ -5,44 +5,19 @@
 			<cms:module name="head_tag" action="show"/>
 		</head>
 		<body>
-			<cms:desktop>
-				<!-- Dialog form -->
-				<div class="floating_form">
-					<p><cms:text constant="form_container_title"/></p>
-					<cms:module
-						name="contact_form"
-						action="show"
-						text_id="contact_form"
-						/>
-				</div>
-			</cms:desktop>
-
 			<header>
-				<!-- Site logo -->
 				<figure class="logo"/>
-
 				<h1><cms:text constant="lead_title"/></h1>
 				<p><cms:text constant="lead_text"/></p>
 
-				<!-- Link to open Dialog form -->
-				<cms:desktop>
-					<a href="javascript:void(0)" class="action">
-						<cms:text constant="button"/>
-					</a>
-				</cms:desktop>
-
-				<cms:mobile>
-					<a href="#form" class="action">
-						<cms:text constant="button"/>
-					</a>
-				</cms:mobile>
+				<a href="#form" class="action">
+					<cms:text constant="button"/>
+				</a>
 			</header>
 
 			<!-- Section Products -->
 			<section class="products">
-				<!-- lead article with title from generic template -->
-				<div kodkod:container="articles,contact_form,gallery" kodkod:count="4">
-				</div>
+				<div kodkod:container="articles,contact_form,gallery" kodkod:count="2"/>
 
 				<!-- LI of articles connect to site sprite by text id -->
 				<ul>
@@ -51,6 +26,7 @@
 						action="show_list"
 						group="products_group"
 						template="parts/group_list.xml"
+						kodkod:type="features"
 						/>
 				</ul>
 			</section>
@@ -60,8 +36,8 @@
 				<cms:module
 					name="gallery"
 					action="show_image_list"
-					group="main_gallery"
 					template="parts/main_gallery.xml"
+					kodkod:type="gallery"
 					/>
 			</section>
 
@@ -71,13 +47,16 @@
 					<cms:module
 						name="articles"
 						action="show"
-						text_id="footer_article"
 						template="stock/article_generic.xml"
+						kodkod:type="articles"
 						>
 						<param name="title" value=""/>
 					</cms:module>
+
 					<p><cms:text constant="call_us"/></p>
-					<a href="'tel:'.urlencode(Language::get_Text('phone'))"
+
+					<a
+						href="'tel:'.urlencode(Language::get_Text('phone'))"
 						cms:eval="href"
 						class="phone"
 						>
@@ -87,13 +66,13 @@
 
 				<!-- Contact form on the right-->
 				<div class="form_container" id="form">
-					<p><cms:text constant="form_container_title"/></p>
 					<cms:module
 						name="contact_form"
 						action="show"
-						text_id="contact_form"
+						kodkod:type="contact_form"
 						/>
 				</div>
+
 				<!-- Copyright -->
 				<cms:template file="stock/copyright.xml">
 					<param name="holder" value="copyright_holder"/>
