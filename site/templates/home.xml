@@ -31,16 +31,6 @@
 				</ul>
 			</section>
 
-			<section class="gallery">
-				<!-- Gallery Module List of images from group -->
-				<cms:module
-					name="gallery"
-					action="show_image_list"
-					template="parts/main_gallery.xml"
-					kodkod:type="gallery"
-					/>
-			</section>
-
 			<footer>
 				<!-- container for content -->
 				<div class="content_left">
